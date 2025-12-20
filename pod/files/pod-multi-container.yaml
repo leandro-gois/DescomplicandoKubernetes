@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meu-pod
+  labels: 
+    run: meu-pod
+spec: 
+  containers:
+  - name: meu-nginx
+    image: nginx
+    ports:
+    - containerPort: 80 
+  - name: meu-alpine
+    image: alpine
+    args:
+    - sleep
+    - "1800"
+
